@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+  <script type="module" crossorigin src="/goit-advancedjs-hw-001/2-form.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-001/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-001/assets/2-form-e5NEdIJz.css">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-001/assets/styles-DvPDDfy5.css">
+</head>
+
+<body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="/goit-advancedjs-hw-001/assets/sprite-E8vg0sBb.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <form class="feedback-form" autocomplete="off">
+        <label>
+            Email
+            <input type="email" name="email" autofocus />
+        </label>
+        <label>
+            Message
+            <textarea name="message" rows="8"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
+
+
