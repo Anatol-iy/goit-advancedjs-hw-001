@@ -64,14 +64,20 @@ function onFormSubmit(event) {
   formData.message = '';
 }
 
+ // не виконаний ось цей пункт ТЗ - Якщо всі поля заповнені, виведи у консоль об’єкт formData з актуальними значеннями - добавил
+  console.log('Submitted formData:', formData);                             
+
 // Функция загрузки данных формы из локального хранилища
 function loadFormData() {
   try {
     // Получаем данные из локального хранилища и парсим их в объект
-    const formData = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
-    // Если данные существуют, заполняем поля формы
-    if (formData) {
+    // Если данные существуют, заполняем объект formData и поля формы - добавил
+    if (savedData) {
+      formData.email = savedData.email || '';
+      formData.message = savedData.message || '';
+
       for (const [name, value] of Object.entries(formData)) {
         form.elements[name].value = value; // Заполняем соответствующее поле формы
       }
